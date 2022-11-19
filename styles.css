@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+}
+
+#wrapper{
+    gap: 25px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+#sidebar{
+    background: orange;
+    grid-row: 1/3;
+}
+
+#header{
+    background: cadetblue;
+    grid-column: 2/3;
+}
+
+#content{
+    background: rosybrown;
+    grid-row:
+}
+
+#wrapper div{
+    border-radius: 20px;
+}
