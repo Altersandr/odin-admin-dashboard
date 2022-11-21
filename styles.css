@@ -2,21 +2,22 @@
     margin: 0;
     padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Ubuntu:wght@700&display=swap');
+
 
 html,
 body{
     width: 100%;
     height: 100%;
-    background: lightblue;
+    font-family: "Ubuntu", sans-serif;
 }
 
 #wrapper{
-    gap: 25px;
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 #sidebar{
@@ -26,31 +27,24 @@ body{
     font-size: 1.3em;
     font-weight: bold;
     display: grid;
-    grid-template-rows: 5rem 1fr 1fr;
+    grid-template-rows: 8rem 1fr;
     padding-top: 1em;
-    padding-left: 1.3em;
+    padding-left: 1em;
     line-height: 1.8em;
-    
 }
 
 #header{
-    background: #ffe4e6;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    z-index: 1;
     grid-column: 2/3;
 }
 
-#content{
-    background: rosybrown;
-    /* grid-row: */
-}
-
-#wrapper div{
-    border-radius: 20px;
-}
-
-img{
+#sidebar img{
     filter: invert(100%);
 }
 input{
+    background-color: #f1d2d5;
     width: 80%;
     height: 2.5em;
     border-radius: 25px;
@@ -60,12 +54,13 @@ input{
     margin-top: 1em;
     display: grid;
     gap: 2em;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 2fr 1fr;
 }
 #account{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
 }
 
 #searchbar{
@@ -73,4 +68,168 @@ input{
     align-items: center;
     gap:0.5em;
     padding-left: 2rem;
+}
+#postbar{
+    background: white;
+    box-shadow: 0px 6px 7px -4px rgb(116, 116, 116);
+}
+
+#content{
+    position: relative;
+    background-color: #fda4af;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+#content #cards{
+    display: grid;
+    gap: 2em;
+    padding: 3em 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(180px, 1fr);
+}
+
+#content .card,
+#announcement,
+#trending,
+#header{
+    background-color: white;
+}
+
+
+#content .card,
+#announcement,
+#trending{
+    border-radius: 0.5em;
+    padding: 1.9em;
+    box-sizing: border-box;
+    box-shadow: 0px 6px 7px -2px rgba(46, 46, 46, 0.75);
+}
+#ann-trend{
+    position: relative;
+    display: grid;
+    gap: 2em;
+    padding: 3em 2em;
+    padding-left: 0;
+}
+
+#content .card p{
+    margin-bottom: 1em;
+}
+
+footer{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap:2em;
+    align-items: flex-end;
+    margin-top: 0.5em;
+}
+
+#content .card{
+    border-left: #881337 7px solid;
+}
+
+#announcement{
+    display: grid;
+}
+
+.post img{
+    height: 60px;
+    border-radius: 50%;
+}
+
+#trending{
+    display: grid;
+    gap: 1em;
+}
+.post{
+    gap: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.gray{
+    color: gray;
+}
+
+.ann{
+    align-content: center;
+    border-bottom: 1px solid gray;
+}
+
+.ann:nth-child(3){
+    border: none;
+}
+
+#postbar{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+.leftsidebar{
+    padding-left: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    line-height: 1.5em;
+}
+
+.leftsidebar img{
+    border-radius: 100%;
+    height: 80px;
+
+}
+
+.leftsidebar .leftsidebarhello{
+    font-size: 75%;
+}
+.leftsidebar .leftsidebarname{
+    font-size: 130%;
+}
+
+.placeholder img{
+    border-radius: 100%;
+}
+
+button{
+    background-color: #e11d48;
+    color: white;
+    border-radius: 20px;
+    width: 7rem;
+    height: 2.5rem;
+    margin-left: 2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#menu{
+    position: sticky;
+}
+
+#control{
+    padding-top: 3rem;
+}
+
+#albums{
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+}
+
+#news,
+#trend{
+    position: absolute;
+}
+
+#trending{
+    position: relative;
+}
+
+#trend{
+    top: -1.5rem;
+}
+#news{
+    top: 1rem;
 }
